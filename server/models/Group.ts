@@ -16,6 +16,9 @@ const GroupSchema = new Schema({
         enum: validGroups,
         trim: true
     }
+}, {
+    timestamps: true,
+    versionKey: false
 })
 
 export default model<IGroup>('Group', GroupSchema)

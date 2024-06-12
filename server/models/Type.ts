@@ -20,6 +20,9 @@ const TypeSchema = new Schema({
         type: String,
         required: [true, 'El ID publico del Tipo es obligatorio']
     }
+}, {
+    timestamps: true,
+    versionKey: false
 })
 
 export default model<IType>('Type', TypeSchema)

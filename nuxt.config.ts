@@ -2,9 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
-    plugins: ["~/server/index.ts"],
+    plugins: [
+      "~/server/index.ts",
+      "~/server/plugins/cloudinary.ts"],
   },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
+    cloudinaryName: process.env.CLOUDINARY_NAME,
+    cloudinaryKey: process.env.CLOUDINARY_KEY,
+    cloudinarySecret: process.env.CLOUDINARY_SECRET,
   },
 })

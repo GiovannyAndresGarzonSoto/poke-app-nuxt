@@ -111,7 +111,10 @@ const pokemonSchema = new Schema({
         ref: 'Abilities',
         required: false
     }
-},
-{ collection: 'pokemon' })
+}, {
+    timestamps: true,
+    versionKey: false,
+    collection: 'pokemon'
+})
 
 export default model<IPokemon>('Pokemon', pokemonSchema)

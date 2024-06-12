@@ -37,6 +37,9 @@ const moveSchema = new Schema({
         ref: 'Class',
         required: [true, 'La Clase es obligatoria']
     }
+}, {
+    timestamps: true,
+    versionKey: false
 })
 
 export default model<IMove>('Move', moveSchema)

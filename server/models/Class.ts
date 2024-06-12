@@ -20,6 +20,9 @@ const ClassSchema = new Schema({
         type: String,
         required: [true, 'El Id publico de la imagen es obligatorio']
     }
+}, {
+    timestamps: true,
+    versionKey: false
 })
 
 export default model<IClass>('Class', ClassSchema)
