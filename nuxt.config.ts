@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   nitro: {
     plugins: [
       "~/server/index.ts",
-      "~/server/plugins/cloudinary.ts"],
+    ],
   },
   runtimeConfig: {
     mongodbUri: process.env.MONGODB_URI,
